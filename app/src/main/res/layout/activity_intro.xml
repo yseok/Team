@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_background"
+    tools:context="com.yuseok.android.team.MainActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/groupView"
+        android:background="@drawable/intro_background"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.yuseok.android.team.ClearEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editEmail"
+                android:hint="이메일"
+                android:layout_above="@+id/editPw"
+                android:layout_alignLeft="@+id/editPw"
+                android:layout_alignStart="@+id/editPw"
+                android:layout_alignRight="@+id/editPw"
+                android:layout_alignEnd="@+id/editPw"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/faceLogin"
+
+                android:onClick="facebookLoginOnClick"
+
+                android:text="Facebook으로 간단하게 로그인!"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+
+                android:layout_width="236dp"
+                android:layout_height="37dp"
+                android:background="@drawable/btn_facebook_login"
+                android:shadowColor="#F03518"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="15"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="88dp" />
+
+            <Button
+                android:id="@+id/testButton"
+                android:text="회원가입"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_yu"
+                android:shadowColor="#7A2020"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="25"
+                android:layout_alignTop="@+id/btnLogin"
+                android:layout_alignRight="@+id/faceLogin"
+                android:layout_alignEnd="@+id/faceLogin"  />
+
+            <Button
+                android:id="@+id/btnLogin"
+
+                android:text="로그인"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_yu"
+                android:shadowColor="#7A2020"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="25"
+                android:layout_marginBottom="16dp"
+                android:layout_above="@+id/faceLogin"
+                android:layout_alignLeft="@+id/faceLogin"
+                android:layout_alignStart="@+id/faceLogin" />
+
+            <com.yuseok.android.team.ClearEditText
+                android:imeOptions="actionDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/editPw"
+                android:hint="비밀번호"
+                android:visibility="visible"
+                android:layout_marginBottom="14dp"
+                android:layout_above="@+id/testButton"
+                android:layout_alignLeft="@+id/btnLogin"
+                android:layout_alignStart="@+id/btnLogin"
+                android:layout_alignRight="@+id/testButton"
+                android:layout_alignEnd="@+id/testButton" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        android:id="@+id/logoImage"
+        android:visibility="visible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

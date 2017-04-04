@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Team</string>
+    <string name="facebook_app_id">225320614608923</string>
+    <string name="title_activity_sign">SignActivity</string>
+</resources>
